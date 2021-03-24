@@ -111,4 +111,8 @@ router.get('/example3/user/:userConfig',  (req,res) => {
     }
 });
 
+router.get('/example4/:reflectedXSS',  (req,res) => {
+  return lodash.template(req.params.reflectedXSS);
+});
+
 module.exports = router
